@@ -1,0 +1,40 @@
+bundle agent hello_world
+{
+files:
+
+  "/home/vagrant/tmp/test_plain"  # Path and name of the file we wish to create
+
+       perms => system,        # Set the permissions of the file as defined in the body "system" below
+       create => "true";       # Make sure the file exists, create if not
+
+  "/home/vagrant/tmp/test_dir/."  # Note the trailing "/." (this tells CFEngine it's a directory)
+
+       perms => system,        # Set the permissions of the directory as defined in the body "system" below
+       create => "true";       # Make sure the directory exists, create if not
+
+  "/tmp/vagrant/tmp/test_plain"  # Path and name of the file we wish to create
+
+       perms => system,        # Set the permissions of the file as defined in the body "system" below
+       create => "true";       # Make sure the file exists, create if not
+
+  "/tmp/vagrant/tmp/test_dir/."  # Note the trailing "/." (this tells CFEngine it's a directory)
+
+       perms => system,        # Set the permissions of the directory as defined in the body "system" below
+       create => "true";       # Make sure the directory exists, create if not
+
+  "/tmp/vagrant/foo/test_plain"  # Path and name of the file we wish to create
+
+       perms => system,        # Set the permissions of the file as defined in the body "system" below
+       create => "true";       # Make sure the file exists, create if not
+
+  "/tmp/vagrant/foo/test_dir/."  # Note the trailing "/." (this tells CFEngine it's a directory)
+
+       perms => system,        # Set the permissions of the directory as defined in the body "system" below
+       create => "true";       # Make sure the directory exists, create if not
+
+}
+
+body perms system
+{
+mode  => "0640";               # Set permissions to "0640"
+}
