@@ -1,1 +1,0 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/li84bud/git/vagrant_cfengine","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
